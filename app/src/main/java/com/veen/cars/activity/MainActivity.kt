@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.veen.cars.R
+import com.veen.cars.activity.helpline.HelplineActivity
+import com.veen.cars.activity.manual.OperatingManualActivity
+import com.veen.cars.activity.productlist.ProductListActivity
+import com.veen.cars.activity.salesandservice.SalesAndServiceActivity
 import com.veen.cars.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,19 +24,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.leftone.setOnClickListener {
-            Toast.makeText(applicationContext, "No File Available", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, SalesAndServiceActivity::class.java))
         }
 
         binding.lefttwo.setOnClickListener {
-            Toast.makeText(applicationContext, "No File Available", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, HelplineActivity::class.java))
         }
 
         binding.rightone.setOnClickListener {
-            Toast.makeText(applicationContext, "No File Available", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, OperatingManualActivity::class.java))
         }
 
         binding.righttwo.setOnClickListener {
-            Toast.makeText(applicationContext, "No File Available", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ProductListActivity::class.java))
         }
     }
 }
