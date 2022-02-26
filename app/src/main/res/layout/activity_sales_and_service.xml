@@ -3,18 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
+            android:layout_height="wrap_content"
             tools:context=".activity.salesandservice.SalesAndServiceActivity">
 
             <TextView
@@ -33,7 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/enquiry"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -55,9 +51,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="@+id/textView4"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4">
+                app:layout_constraintEnd_toEndOf="@+id/enquiry"
+                app:layout_constraintStart_toStartOf="@+id/enquiry"
+                app:layout_constraintTop_toBottomOf="@+id/enquiry">
 
                 <EditText
                     android:id="@+id/editTextTextPersonName"
@@ -187,7 +183,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/serviceMain"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -211,9 +207,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="32dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/textView7"
-                app:layout_constraintStart_toStartOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/textView7">
+                app:layout_constraintEnd_toEndOf="@+id/serviceMain"
+                app:layout_constraintStart_toStartOf="@+id/serviceMain"
+                app:layout_constraintTop_toBottomOf="@+id/serviceMain">
 
                 <EditText
                     android:id="@+id/editTextTextPersonName1"
