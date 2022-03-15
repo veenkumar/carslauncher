@@ -13,7 +13,7 @@ import com.veen.cars.databinding.ImageSliderBinding
 
 class ImageSliderAdapter(private val context: Context): PagerAdapter(){
     private var inflater: LayoutInflater? = null
-    private val images = arrayOf(R.drawable.logo, R.drawable.menu, R.drawable.helpline, R.drawable.oprating)
+    private val images = arrayOf(R.drawable.slider1, R.drawable.slider2, R.drawable.slider3, R.drawable.slider4)
 
     override fun getCount(): Int {
         return images.size

@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -18,12 +20,12 @@ import com.veen.cars.R
 import com.veen.cars.adapter.AppListAdapter
 import com.veen.cars.databinding.FragmentMainScreenBinding
 import com.veen.cars.model.AppInfo
+import com.veen.cars.utils.AppClick
 
-class MainScreenFragment() : Fragment() {
+class MainScreenFragment() : Fragment(), AppClick {
+    private lateinit var mainScreenFragmentViewModel: MainScreenFragmentViewModel
     private lateinit var v: View
-
     var position: Int = 0
-
     constructor(p: Int):this() {
         position = p;
     }
@@ -35,18 +37,14 @@ class MainScreenFragment() : Fragment() {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_main_screen, container, false);
 
-        if (position %2 == 0) {
-            v.setBackgroundResource(R.color.white);
-        } else {
-            v.setBackgroundResource(R.color.teal_200);
-        }
-
-        val apps = getAppList();
+        mainScreenFragmentViewModel = ViewModelProvider(this)[MainScreenFragmentViewModel::class.java]
+        mainScreenFragmentViewModel.getPosition(v, position)
+        val apps = mainScreenFragmentViewModel.getAppList()
 
         val listView: RecyclerView = v.findViewById(R.id.list_view);
         listView.apply {
             layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
-            adapter = AppListAdapter(apps)
+            adapter = AppListAdapter(apps, this@MainScreenFragment)
         }
 
         val adapter: AppListAdapter = listView.adapter as AppListAdapter;
@@ -63,30 +61,15 @@ class MainScreenFragment() : Fragment() {
         return v;
     }
 
-    fun getAppList(): ArrayList<AppInfo> {
-        val pm: PackageManager = requireContext().packageManager;
-        val appsList = ArrayList<AppInfo>()
-
-        val i = Intent(Intent.ACTION_MAIN, null)
-        i.addCategory(Intent.CATEGORY_LAUNCHER)
-
-        val allApps = pm.queryIntentActivities(i, 0)
-        for (ri in allApps) {
-            val label = ri.loadLabel(pm).toString();
-            val packageName = ri.activityInfo.packageName
-            val icon = ri.activityInfo.loadIcon(pm)
-            val app = AppInfo(label, packageName, icon)
-            appsList.add(app)
-        }
-        return appsList;
-    }
-
-
     companion object {
         fun getInstance(position: Int): MainScreenFragment {
             val instance = MainScreenFragment(position);
             // instance.position = position;
             return instance
         }
+    }
+
+    override fun onClick(appInfo: AppInfo) {
+        Toast.makeText(requireContext(), "Disabled", Toast.LENGTH_SHORT).show()
     }
 }

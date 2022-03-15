@@ -2,4 +2,5 @@
     <string name="app_name">Cars</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="anti_smog_fun_manual_semi_automatic"><font color="#000000">ANTI SMOG FUN</font> <font color="#4CAF50">MANUAL/ Semi Automatic</font></string>
 </resources>

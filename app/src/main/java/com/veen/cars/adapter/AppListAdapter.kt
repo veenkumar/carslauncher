@@ -13,8 +13,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.veen.cars.R
 import com.veen.cars.activity.HomeActivity
 import com.veen.cars.model.AppInfo
+import com.veen.cars.utils.AppClick
 
-class AppListAdapter(private val list: List<AppInfo>)
+class AppListAdapter(private val list: List<AppInfo>, private val appClick: AppClick)
     : RecyclerView.Adapter<AppListAdapter.AppInfoViewHolder>(){
 
     var onItemClick: ((AppInfo) -> Unit)? = null
@@ -55,7 +56,6 @@ class AppListAdapter(private val list: List<AppInfo>)
             }
 
             iconLayout.setOnLongClickListener {view->
-                Toast.makeText(view.context, "Disabled", Toast.LENGTH_SHORT).show()
                 val p: PackageManager = view.context.packageManager
                 val componentName = ComponentName(view.context, HomeActivity::class.java)
                 p.setComponentEnabledSetting(
@@ -64,6 +64,7 @@ class AppListAdapter(private val list: List<AppInfo>)
                     PackageManager.DONT_KILL_APP
                 )
                 iconLayout.visibility = View.GONE
+                appClick.onClick(appInfo)
                 return@setOnLongClickListener false
             }
         }

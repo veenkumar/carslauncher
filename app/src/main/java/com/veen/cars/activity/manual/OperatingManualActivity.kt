@@ -13,11 +13,6 @@ class OperatingManualActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_operating_manual)
-        imageSliderImplementation()
-    }
 
-    private fun imageSliderImplementation() {
-        val adapter = ImageSliderAdapter(this)
-        binding.viewPager.adapter = adapter
     }
 }

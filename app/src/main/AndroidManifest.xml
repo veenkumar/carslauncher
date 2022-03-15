@@ -25,9 +25,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cars">
         <activity
+            android:name=".activity.productlist.ListActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".activity.helpline.HelplineActivity"
             android:exported="false"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity.manual.OperatingManualActivity"
             android:exported="false"
