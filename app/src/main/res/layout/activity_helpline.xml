@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cardView"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/helpline" />
+            app:srcCompat="@drawable/helplinecall" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -36,7 +36,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#373535">
+                android:background="@color/chocolate">
 
                 <TextView
                     android:id="@+id/textView"

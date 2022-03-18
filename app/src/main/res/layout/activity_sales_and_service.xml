@@ -3,345 +3,202 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/white"
+        tools:context=".activity.salesandservice.SalesAndServiceActivity">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:context=".activity.salesandservice.SalesAndServiceActivity">
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/formimage" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:text="SALES &amp; SERVICES"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/enquiry"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/greencircleview"
-                android:padding="@dimen/_12dp"
-                android:paddingStart="@dimen/_15dp"
-                android:paddingEnd="@dimen/_15dp"
-                android:text="NEW ENQUIRY"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/enquiryLayout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="@+id/enquiry"
-                app:layout_constraintStart_toStartOf="@+id/enquiry"
-                app:layout_constraintTop_toBottomOf="@+id/enquiry">
+                    <TextView
+                        android:id="@+id/ssheading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="send your query"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/ssSales"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    <TextView
+                        android:id="@+id/ssSales"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/sales"
+                        android:background="@drawable/greybutton"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/sp_18"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toTopOf="@+id/ssname"
+                        app:layout_constraintEnd_toStartOf="@+id/ssServices"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ssheading" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    <TextView
+                        android:id="@+id/ssServices"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:text="@string/services"
+                        android:background="@drawable/lightwhitebutton"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/sp_18"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/ssSales"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/ssSales"
+                        app:layout_constraintTop_toTopOf="@+id/ssSales" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    <EditText
+                        android:id="@+id/ssname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/imagebox"
+                        android:hint="@string/name"
+                        android:textColorHint="@color/grey"
+                        android:inputType="textMultiLine|textPersonName"
+                        android:padding="@dimen/_5dp"
+                        app:layout_constraintBottom_toTopOf="@+id/sscompanyname"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ssSales" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    <EditText
+                        android:id="@+id/sscompanyname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/imagebox"
+                        android:hint="@string/company_name"
+                        android:inputType="textMultiLine|textPersonName"
+                        android:padding="@dimen/_5dp"
+                        android:textColorHint="@color/grey"
+                        app:layout_constraintBottom_toTopOf="@+id/ssaddress"
+                        app:layout_constraintEnd_toEndOf="@+id/ssname"
+                        app:layout_constraintStart_toStartOf="@+id/ssname"
+                        app:layout_constraintTop_toBottomOf="@+id/ssname" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    <EditText
+                        android:id="@+id/ssaddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/imagebox"
+                        android:hint="@string/address"
+                        android:inputType="textMultiLine|textPersonName"
+                        android:padding="@dimen/_5dp"
+                        android:textColorHint="@color/grey"
+                        app:layout_constraintBottom_toTopOf="@+id/sscontact"
+                        app:layout_constraintEnd_toEndOf="@+id/sscompanyname"
+                        app:layout_constraintStart_toStartOf="@+id/sscompanyname"
+                        app:layout_constraintTop_toBottomOf="@+id/sscompanyname" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    <EditText
+                        android:id="@+id/sscontact"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/imagebox"
+                        android:hint="@string/contact_no"
+                        android:inputType="textMultiLine|textPersonName"
+                        android:padding="@dimen/_5dp"
+                        android:textColorHint="@color/grey"
+                        app:layout_constraintBottom_toTopOf="@+id/ssemaildetails"
+                        app:layout_constraintEnd_toEndOf="@+id/ssaddress"
+                        app:layout_constraintStart_toStartOf="@+id/ssaddress"
+                        app:layout_constraintTop_toBottomOf="@+id/ssaddress" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <EditText
+                        android:id="@+id/ssemaildetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/imagebox"
+                        android:hint="@string/email"
+                        android:inputType="textMultiLine|textPersonName"
+                        android:padding="@dimen/_5dp"
+                        android:textColorHint="@color/grey"
+                        app:layout_constraintBottom_toTopOf="@+id/ssqueries"
+                        app:layout_constraintEnd_toEndOf="@+id/sscontact"
+                        app:layout_constraintStart_toStartOf="@+id/sscontact"
+                        app:layout_constraintTop_toBottomOf="@+id/sscontact" />
 
-            <TextView
-                android:id="@+id/serviceMain"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/greencircleview"
-                android:padding="@dimen/_12dp"
-                android:paddingStart="@dimen/_15dp"
-                android:paddingEnd="@dimen/_15dp"
-                android:text="SERVICE MAINTENANCE"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/enquiryLayout" />
+                    <EditText
+                        android:id="@+id/ssqueries"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/imagebox"
+                        android:hint="@string/your_queries"
+                        android:inputType="textMultiLine|textPersonName"
+                        android:padding="@dimen/_5dp"
+                        android:textColorHint="@color/grey"
+                        app:layout_constraintBottom_toTopOf="@+id/ssSendButton"
+                        app:layout_constraintEnd_toEndOf="@+id/ssemaildetails"
+                        app:layout_constraintStart_toStartOf="@+id/ssemaildetails"
+                        app:layout_constraintTop_toBottomOf="@+id/ssemaildetails" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/serviceLayout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="32dp"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/serviceMain"
-                app:layout_constraintStart_toStartOf="@+id/serviceMain"
-                app:layout_constraintTop_toBottomOf="@+id/serviceMain">
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName21"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName21"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName31"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName1"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName31"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName41"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName21"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName41"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName51"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName31"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName51"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName61"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName41"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName61"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName71"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName51"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName71"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/grey_border"
-                    android:hint="Enter Details"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/_8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName61"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
+                    <TextView
+                        android:id="@+id/ssSendButton"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/greencircleview"
+                        android:padding="@dimen/_10dp"
+                        android:text="Send"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/ssqueries"
+                        app:layout_constraintStart_toStartOf="@+id/ssqueries"
+                        app:layout_constraintTop_toBottomOf="@+id/ssqueries" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
