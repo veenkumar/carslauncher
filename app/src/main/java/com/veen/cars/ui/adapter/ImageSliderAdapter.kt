@@ -1,4 +1,4 @@
-package com.veen.cars.adapter
+package com.veen.cars.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

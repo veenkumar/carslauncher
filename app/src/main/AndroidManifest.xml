@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.veen.cars">
 
+    <!--Internet permission here apply-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <uses-permission
         android:name="android.permission.BIND_APPWIDGET"
         tools:ignore="ProtectedPermissions" />
@@ -23,33 +30,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Cars">
         <activity
-            android:name=".activity.productlist.ListActivity"
+            android:name=".ui.activity.productlist.ListActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activity.helpline.HelplineActivity"
+            android:name=".ui.activity.helpline.HelplineActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activity.manual.OperatingManualActivity"
+            android:name=".ui.activity.manual.OperatingManualActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activity.productlist.ProductListActivity"
+            android:name=".ui.activity.productlist.ProductListActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activity.salesandservice.SalesAndServiceActivity"
+            android:name=".ui.activity.salesandservice.SalesAndServiceActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activity.HomeActivity"
+            android:name=".ui.activity.HomeActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -62,7 +70,7 @@
         </activity>
 
         <receiver
-            android:name=".activity.MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">

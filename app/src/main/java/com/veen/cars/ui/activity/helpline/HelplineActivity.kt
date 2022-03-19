@@ -1,4 +1,4 @@
-package com.veen.cars.activity.helpline
+package com.veen.cars.ui.activity.helpline
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

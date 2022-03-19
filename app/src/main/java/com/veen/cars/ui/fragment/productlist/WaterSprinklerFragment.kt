@@ -1,4 +1,4 @@
-package com.veen.cars.fragment.productlist
+package com.veen.cars.ui.fragment.productlist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.veen.cars.R
-import com.veen.cars.adapter.ImageSliderAdapter
-import com.veen.cars.adapter.ProductListAdapter
+import com.veen.cars.ui.adapter.ImageSliderAdapter
+import com.veen.cars.ui.adapter.ProductListAdapter
 import com.veen.cars.databinding.FragmentWaterSprinklerBinding
 
 class WaterSprinklerFragment : Fragment() {

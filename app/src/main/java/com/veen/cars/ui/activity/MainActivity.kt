@@ -1,4 +1,4 @@
-package com.veen.cars.activity
+package com.veen.cars.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.veen.cars.R
-import com.veen.cars.activity.helpline.HelplineActivity
-import com.veen.cars.activity.manual.OperatingManualActivity
-import com.veen.cars.activity.productlist.ProductListActivity
-import com.veen.cars.activity.salesandservice.SalesAndServiceActivity
+import com.veen.cars.ui.activity.helpline.HelplineActivity
+import com.veen.cars.ui.activity.manual.OperatingManualActivity
+import com.veen.cars.ui.activity.productlist.ProductListActivity
+import com.veen.cars.ui.activity.salesandservice.SalesAndServiceActivity
 import com.veen.cars.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

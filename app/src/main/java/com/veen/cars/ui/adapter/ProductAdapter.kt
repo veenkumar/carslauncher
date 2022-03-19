@@ -1,19 +1,19 @@
-package com.veen.cars.adapter
+package com.veen.cars.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.veen.cars.databinding.AdapterProductlistBinding
+import com.veen.cars.databinding.AdapterProductBinding
 
-class ProductListAdapter(private val context: Context) :
-    RecyclerView.Adapter<ProductListAdapter.ViewHolder>() {
-    private lateinit var binding: AdapterProductlistBinding
+class ProductAdapter(private val context: Context) :
+    RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+    private lateinit var binding: AdapterProductBinding
 
-    inner class ViewHolder(itemView: AdapterProductlistBinding) : RecyclerView.ViewHolder(itemView.root)
+    inner class ViewHolder(itemView: AdapterProductBinding) : RecyclerView.ViewHolder(itemView.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        binding = AdapterProductlistBinding.inflate(
+        binding = AdapterProductBinding.inflate(
             LayoutInflater.from(
                 context
             ), parent, false

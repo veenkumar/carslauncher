@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".activity.productlist.ListActivity">
+        tools:context=".ui.activity.productlist.ListActivity">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView"
-            android:name="com.veen.cars.fragment.productlist.WaterSprinklerFragment"
+            android:name="com.veen.cars.ui.fragment.productlist.WaterSprinklerFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"

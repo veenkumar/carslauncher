@@ -1,4 +1,4 @@
-package com.veen.cars.fragment
+package com.veen.cars.ui.fragment
 
 import android.app.Application
 import android.content.Intent

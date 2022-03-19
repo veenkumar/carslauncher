@@ -1,4 +1,4 @@
-package com.veen.cars.fragment
+package com.veen.cars.ui.fragment
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.veen.cars.R
-import com.veen.cars.adapter.AppListAdapter
+import com.veen.cars.ui.adapter.AppListAdapter
 import com.veen.cars.databinding.FragmentMainScreenBinding
 import com.veen.cars.model.AppInfo
 import com.veen.cars.utils.AppClick

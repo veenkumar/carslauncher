@@ -7,4 +7,6 @@
     <dimen name="_12dp">12dp</dimen>
     <dimen name="_10dp">10dp</dimen>
     <dimen name="sp_18">18sp</dimen>
+    <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_350">350dp</dimen>
 </resources>

@@ -1,4 +1,4 @@
-package com.veen.cars.adapter
+package com.veen.cars.ui.adapter
 
 import android.content.ComponentName
 import android.content.pm.PackageManager
@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.veen.cars.R
-import com.veen.cars.activity.HomeActivity
+import com.veen.cars.ui.activity.HomeActivity
 import com.veen.cars.model.AppInfo
 import com.veen.cars.utils.AppClick
 

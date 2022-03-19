@@ -1,11 +1,11 @@
-package com.veen.cars.activity
+package com.veen.cars.ui.activity
 
 import android.appwidget.AppWidgetManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.veen.cars.R
-import com.veen.cars.adapter.DoppelgangerAdapter
+import com.veen.cars.ui.adapter.DoppelgangerAdapter
 import com.veen.cars.databinding.ActivityHomeBinding
 import com.veen.cars.utils.ViewPager2PageTransformation
 

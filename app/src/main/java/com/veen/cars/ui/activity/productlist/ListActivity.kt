@@ -1,11 +1,11 @@
-package com.veen.cars.activity.productlist
+package com.veen.cars.ui.activity.productlist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.veen.cars.R
 import com.veen.cars.databinding.ActivityListBinding
-import com.veen.cars.fragment.productlist.WaterSprinklerFragment
+import com.veen.cars.ui.fragment.productlist.WaterSprinklerFragment
 
 class ListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityListBinding
