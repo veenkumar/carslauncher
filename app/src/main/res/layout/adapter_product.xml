@@ -30,11 +30,11 @@
                 android:background="@color/white">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/pimage"
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:scaleType="fitXY"
-                    app:layout_constraintBottom_toTopOf="@+id/textView3"
+                    app:layout_constraintBottom_toTopOf="@+id/pheading"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,7 @@
                     app:srcCompat="@drawable/slider1" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/pheading"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
@@ -51,14 +51,14 @@
                     android:textAlignment="center"
                     android:textColor="@color/chocolate"
                     android:textSize="24sp"
-                    app:layout_constraintBottom_toTopOf="@+id/textView15"
+                    app:layout_constraintBottom_toTopOf="@+id/pdetails"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+                    app:layout_constraintTop_toBottomOf="@+id/pimage" />
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/pdetails"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -71,7 +71,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                    app:layout_constraintTop_toBottomOf="@+id/pheading" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
