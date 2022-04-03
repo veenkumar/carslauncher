@@ -1,4 +1,4 @@
-package com.veen.cars.ui.adapter
+package com.veen.cars.views.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,7 +10,8 @@ class ProductListAdapter(private val context: Context) :
     RecyclerView.Adapter<ProductListAdapter.ViewHolder>() {
     private lateinit var binding: AdapterProductlistBinding
 
-    inner class ViewHolder(itemView: AdapterProductlistBinding) : RecyclerView.ViewHolder(itemView.root)
+    inner class ViewHolder(itemView: AdapterProductlistBinding) :
+        RecyclerView.ViewHolder(itemView.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = AdapterProductlistBinding.inflate(

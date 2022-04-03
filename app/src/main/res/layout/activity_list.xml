@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            tools:context=".ui.activity.productlist.ListActivity">
+            tools:context=".views.activity.productlist.ListActivity">
 
             <TextView
                 android:id="@+id/product_title"
@@ -71,13 +71,15 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/green" >
+                    android:background="@color/green">
 
                     <TextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/product_detailsss"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="TextView"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +103,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rightSide" />
 
+            <TextView
+                android:id="@+id/tabledata"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:inputType="textMultiLine"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listRecyclerView"
                 android:layout_width="0dp"
@@ -109,11 +126,14 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="32dp"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"
-                tools:listitem="@layout/adapter_productlist" />
+                tools:listitem="@layout/adapter_productlist">
+
+            </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

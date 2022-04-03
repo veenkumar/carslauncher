@@ -1,4 +1,4 @@
-package com.veen.cars.ui.adapter
+package com.veen.cars.views.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,13 +7,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.squareup.picasso.Picasso
 import com.veen.cars.R
-import com.veen.cars.databinding.ImageSliderBinding
 
-class ImageSliderAdapter(private val context: Context): PagerAdapter(){
+class ImageSliderAdapter(private val context: Context) : PagerAdapter() {
     private var inflater: LayoutInflater? = null
-    private val images = arrayOf(R.drawable.slider1, R.drawable.slider2, R.drawable.slider3, R.drawable.slider4)
+    private val images =
+        arrayOf(R.drawable.slider1, R.drawable.slider2, R.drawable.slider3, R.drawable.slider4)
 
     override fun getCount(): Int {
         return images.size

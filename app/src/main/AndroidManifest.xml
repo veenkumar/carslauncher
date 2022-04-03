@@ -33,31 +33,31 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Cars">
         <activity
-            android:name=".ui.activity.productlist.ListActivity"
+            android:name=".views.activity.productlist.ListActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ui.activity.helpline.HelplineActivity"
+            android:name=".views.activity.helpline.HelplineActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ui.activity.manual.OperatingManualActivity"
+            android:name=".views.activity.manual.OperatingManualActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ui.activity.productlist.ProductListActivity"
+            android:name=".views.activity.productlist.ProductListActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ui.activity.salesandservice.SalesAndServiceActivity"
+            android:name=".views.activity.salesandservice.SalesAndServiceActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ui.activity.HomeActivity"
+            android:name=".views.activity.HomeActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name=".views.activity.MainActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -70,7 +70,7 @@
         </activity>
 
         <receiver
-            android:name=".ui.activity.MainActivity"
+            android:name=".views.activity.MainActivity"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">

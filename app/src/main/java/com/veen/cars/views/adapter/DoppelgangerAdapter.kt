@@ -1,9 +1,9 @@
-package com.veen.cars.ui.adapter
+package com.veen.cars.views.adapter
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.veen.cars.ui.fragment.MainScreenFragment
+import com.veen.cars.views.fragment.MainScreenFragment
 
 class DoppelgangerAdapter(activity: AppCompatActivity, val itemsCount: Int) :
     FragmentStateAdapter(activity) {

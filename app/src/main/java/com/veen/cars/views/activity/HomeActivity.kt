@@ -1,13 +1,13 @@
-package com.veen.cars.ui.activity
+package com.veen.cars.views.activity
 
 import android.appwidget.AppWidgetManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.veen.cars.R
-import com.veen.cars.ui.adapter.DoppelgangerAdapter
 import com.veen.cars.databinding.ActivityHomeBinding
 import com.veen.cars.utils.ViewPager2PageTransformation
+import com.veen.cars.views.adapter.DoppelgangerAdapter
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding

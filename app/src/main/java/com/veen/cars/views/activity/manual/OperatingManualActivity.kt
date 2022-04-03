@@ -1,10 +1,9 @@
-package com.veen.cars.ui.activity.manual
+package com.veen.cars.views.activity.manual
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.veen.cars.R
-import com.veen.cars.ui.adapter.ImageSliderAdapter
 import com.veen.cars.databinding.ActivityOperatingManualBinding
 
 class OperatingManualActivity : AppCompatActivity() {

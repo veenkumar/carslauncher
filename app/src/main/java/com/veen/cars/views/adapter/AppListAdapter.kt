@@ -1,4 +1,4 @@
-package com.veen.cars.ui.adapter
+package com.veen.cars.views.adapter
 
 import android.content.ComponentName
 import android.content.pm.PackageManager
@@ -7,22 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.veen.cars.R
-import com.veen.cars.ui.activity.HomeActivity
 import com.veen.cars.model.AppInfo
 import com.veen.cars.utils.AppClick
+import com.veen.cars.views.activity.HomeActivity
 
-class AppListAdapter(private val list: List<AppInfo>, private val appClick: AppClick)
-    : RecyclerView.Adapter<AppListAdapter.AppInfoViewHolder>(){
+class AppListAdapter(private val list: List<AppInfo>, private val appClick: AppClick) :
+    RecyclerView.Adapter<AppListAdapter.AppInfoViewHolder>() {
 
     var onItemClick: ((AppInfo) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppInfoViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return AppInfoViewHolder(inflater, parent);
+        return AppInfoViewHolder(inflater, parent)
     }
 
     override fun getItemCount(): Int {
@@ -55,7 +54,7 @@ class AppListAdapter(private val list: List<AppInfo>, private val appClick: AppC
                 onItemClick?.invoke(list[adapterPosition])
             }
 
-            iconLayout.setOnLongClickListener {view->
+            iconLayout.setOnLongClickListener { view ->
                 val p: PackageManager = view.context.packageManager
                 val componentName = ComponentName(view.context, HomeActivity::class.java)
                 p.setComponentEnabledSetting(

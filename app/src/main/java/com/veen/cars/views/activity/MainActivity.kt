@@ -1,23 +1,22 @@
-package com.veen.cars.ui.activity
+package com.veen.cars.views.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.veen.cars.R
-import com.veen.cars.ui.activity.helpline.HelplineActivity
-import com.veen.cars.ui.activity.manual.OperatingManualActivity
-import com.veen.cars.ui.activity.productlist.ProductListActivity
-import com.veen.cars.ui.activity.salesandservice.SalesAndServiceActivity
 import com.veen.cars.databinding.ActivityMainBinding
+import com.veen.cars.views.activity.helpline.HelplineActivity
+import com.veen.cars.views.activity.manual.OperatingManualActivity
+import com.veen.cars.views.activity.productlist.ProductListActivity
+import com.veen.cars.views.activity.salesandservice.SalesAndServiceActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.homebutton.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
